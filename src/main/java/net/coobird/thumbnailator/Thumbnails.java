@@ -9,12 +9,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
+import java.security.Provider;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Supplier;
 
 import javax.imageio.ImageIO;
 
@@ -126,7 +128,7 @@ public final class Thumbnails
 	 * reason for the exception.
 	 * <p>
 	 * This method is used to perform a check on the output dimensions of a
-	 * thumbnail for the {@link Thumbnails#createThumbnail} methods.
+	 * thumbnail for the 'create' methods.
 	 * 
 	 * @param width		The width to validate.
 	 * @param height	The height to validate.
@@ -1999,7 +2001,13 @@ watermark(Positions.CENTER, image, opacity);
 			return this;
 		}
 
-		
+		public Builder<T> rotate(Supplier<Double> angle)
+		{
+			filterPipeline.add(Rotation.newRotator(angle.get()));
+			return this;
+		}
+
+
 		/*
 		 * other filters
 		 */
