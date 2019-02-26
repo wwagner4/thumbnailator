@@ -132,7 +132,7 @@ public class InputStreamImageSourceTest
 		catch (IOException e)
 		{
 			// then
-			assertEquals("Error reading PNG image data", e.getMessage());
+			assertEquals("Error reading PNG metadata", e.getMessage());
 			throw e;
 		}
 		fail();
