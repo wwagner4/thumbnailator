@@ -3569,7 +3569,7 @@ public class ThumbnailatorTest
 		assertEquals(new Dimension(50, 50), ac.getValue().getSize());
 		
 		// clean up
-		new File("src/test/resources/Thumbnailator/thumbnail.grid.png").deleteOnExit();
+		new File("src/test/resources/Thumbnailator/thumbnail.grid.png");
 	}
 	
 	@Test
@@ -3593,7 +3593,7 @@ public class ThumbnailatorTest
 		assertEquals(new Dimension(50, 50), ac.getValue().getSize());
 		
 		// clean up
-		new File("src/test/resources/Thumbnailator/thumbnail.grid.png").deleteOnExit();
+		new File("src/test/resources/Thumbnailator/thumbnail.grid.png");
 	}
 	
 	/**
