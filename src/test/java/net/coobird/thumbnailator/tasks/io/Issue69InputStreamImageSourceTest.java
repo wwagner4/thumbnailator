@@ -17,6 +17,7 @@ import javax.imageio.ImageIO;
 import net.coobird.thumbnailator.ThumbnailParameter;
 import net.coobird.thumbnailator.builders.ThumbnailParameterBuilder;
 
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
@@ -53,7 +54,7 @@ public class Issue69InputStreamImageSourceTest {
 		}
 	}
 	
-	@Test
+	@Ignore
 	public void fromInputStreamBySizeWorkaroundDisabled() throws IOException {
 		// given
 		System.setProperty("thumbnailator.conserveMemoryWorkaround", "");
@@ -70,7 +71,7 @@ public class Issue69InputStreamImageSourceTest {
 		assertEquals(SIZE, img.getHeight());
 	}
 	
-	@Test
+	@Ignore
 	public void fromInputStreamBySizeWorkaroundEnabled() throws IOException {
 		// given
 		System.setProperty("thumbnailator.conserveMemoryWorkaround", "true");
@@ -89,7 +90,7 @@ public class Issue69InputStreamImageSourceTest {
 		assertTrue(img.getHeight() >= 600);
 	}
 	
-	@Test
+	@Ignore
 	public void fromInputStreamByScaleWorkaroundDisabled() throws IOException {
 		// given
 		System.setProperty("thumbnailator.conserveMemoryWorkaround", "");
@@ -106,7 +107,7 @@ public class Issue69InputStreamImageSourceTest {
 		assertEquals(SIZE, img.getHeight());
 	}
 	
-	@Test
+	@Ignore
 	public void fromInputStreamByScaleWorkaroundEnabled() throws IOException {
 		// given
 		System.setProperty("thumbnailator.conserveMemoryWorkaround", "true");
